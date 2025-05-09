@@ -14,12 +14,13 @@ class MainActivity : AppCompatActivity() {
 
     //criando váriavel todoAdapter e binding
     /*
-    * todoAdapter:
+    * todoAdapter: traz as funções do TodoAdapter / criação de objeto todoAdapter
     *
-    * Binding:
+    * Binding: Criação do checklist
     * */
     private lateinit var todoAdapter: TodoAdapter
     private lateinit var binding: ActivityMainBinding
+
 
 
     //Criação das funções
@@ -38,9 +39,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //todoAcapter vai receber uma lista mutable
-        //
-        todoAdapter = TodoAdapter(mutableListOf())
+        //objeto vai receber uma lista mutable
+        //utiliza ActivityMainBinding para o binding e depois faz
+        // ?
+        todoAdapter = TodoAdapter(mutableListOf(), this)
         binding.rvTodoItems.adapter = todoAdapter
         binding.rvTodoItems.layoutManager = LinearLayoutManager(this)
 

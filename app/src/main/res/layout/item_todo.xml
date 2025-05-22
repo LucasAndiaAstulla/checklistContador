@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
+    android:background="#111111"
     android:layout_width="match_parent"
-    android:padding="8dp">
+    android:elevation="4dp"
+    android:padding="12dp">
 
     <!-- Texto da tarefa -->
     <TextView
@@ -11,6 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Example"
+        android:textColor="#ffffff"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,6 +26,7 @@
         android:id="@+id/cbDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:buttonTint="#b1b1b1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnIncrement"/>
@@ -30,9 +34,15 @@
     <!-- Botão diminuir -->
     <Button
         android:id="@+id/btnDecrement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
         android:text="−"
+        android:gravity="center"
+        android:paddingHorizontal="1dp"
+        android:paddingVertical="1dp"
+        android:background="@drawable/button_background"
+        android:textColor="#b1b1b1"
+        android:textSize="35sp"
         app:layout_constraintTop_toBottomOf="@+id/tvTodoTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -43,7 +53,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="18sp"
+        android:textSize="30sp"
+        android:textColor="#b1b1b1"
         app:layout_constraintStart_toEndOf="@id/btnDecrement"
         app:layout_constraintTop_toTopOf="@id/btnDecrement"
         app:layout_constraintBottom_toBottomOf="@id/btnDecrement"
@@ -53,9 +64,15 @@
     <!-- Botão aumentar -->
     <Button
         android:id="@+id/btnIncrement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="1dp"
+        android:gravity="center"
         android:text="+"
+        android:textSize="35sp"
+        android:background="@drawable/button_background"
+        android:textColor="#b1b1b1"
         app:layout_constraintTop_toTopOf="@id/btnDecrement"
         app:layout_constraintBottom_toBottomOf="@id/btnDecrement"
         app:layout_constraintEnd_toEndOf="parent"/>

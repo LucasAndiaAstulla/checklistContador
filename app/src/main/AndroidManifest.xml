@@ -12,13 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChecklistContador"
         tools:targetApi="31">
+        <!-- adjustPan:Faz o teclado subir quando é aberto o texto  -->
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
